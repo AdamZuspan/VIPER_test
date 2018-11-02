@@ -27,13 +27,13 @@ protocol SimpsonsInteractorOutput: class {
 
 class SimpsonsPresenter: SimpsonsModuleInterface, SimpsonsInteractorOutput {
     // Reference to the View (weak to avoid retain cycle).
-    //weak var view: SimpsonsViewInterface!
+    weak var view: SimpsonsViewInterface!
     
     // Reference to the Interactor's interface.
     var interactor: SimpsonsInteractorInput!
     
     // Reference to the Router
-    //var wireframe: SimpsonsWireframe!
+    var wireframe: SimpsonsWireFrame!
     
     
     // MARK: ArticlesModuleInterface
@@ -43,7 +43,7 @@ class SimpsonsPresenter: SimpsonsModuleInterface, SimpsonsInteractorOutput {
     }
     
     func showDetailsForSimpsons(simpsons: JsonModelSimpsons) {
-        //self.wireframe.presentDetailsInterfaceForArticle(simpsons)
+        self.wireframe.presentDetailsInterfaceForSimpsons(simpsons: simpsons)
     }
     
     // MARK: ArticlesInteractorOutput
@@ -53,9 +53,9 @@ class SimpsonsPresenter: SimpsonsModuleInterface, SimpsonsInteractorOutput {
             //Issue here since no member named simpsons in this class
             
             //self.simpsons = simpsons
-            //self.view.showArticlesData(articles)
+            self.view.showSimpsonsData(simpsons: simpsons)
         } else {
-            //self.view.showNoContentScreen()
+            self.view.showNoContentScreen()
         }
     }
     
