@@ -13,19 +13,50 @@ import Foundation
  */
 protocol SimpsonsModuleInterface: class {
     func updateView()
-    func showDetailsForArticle(article: Article)
+    func showDetailsForSimpsons(simpsons: JsonModelSimpsons)
 }
 
 
 /*
  * Protocol that defines the commands sent from the Interactor to the Presenter.
  */
-protocol ArticlesInteractorOutput: class {
-    func articlesFetched(articles: [Article])
+protocol SimpsonsInteractorOutput: class {
+    func simpsonsFetched(simpsons: [JsonModelSimpsons])
 }
 
 
-class SimpsonsPresenter {
+class SimpsonsPresenter: SimpsonsModuleInterface, SimpsonsInteractorOutput {
+    // Reference to the View (weak to avoid retain cycle).
+    //weak var view: SimpsonsViewInterface!
     
+    // Reference to the Interactor's interface.
+    var interactor: SimpsonsInteractorInput!
+    
+    // Reference to the Router
+    //var wireframe: SimpsonsWireframe!
+    
+    
+    // MARK: ArticlesModuleInterface
+    
+    func updateView() {
+        self.interactor.fetchSimpsons()
+    }
+    
+    func showDetailsForSimpsons(simpsons: JsonModelSimpsons) {
+        //self.wireframe.presentDetailsInterfaceForArticle(simpsons)
+    }
+    
+    // MARK: ArticlesInteractorOutput
+    
+    func simpsonsFetched(simpsons: [JsonModelSimpsons]) {
+        if simpsons.count > 0 {
+            //Issue here since no member named simpsons in this class
+            
+            //self.simpsons = simpsons
+            //self.view.showArticlesData(articles)
+        } else {
+            //self.view.showNoContentScreen()
+        }
+    }
     
 }

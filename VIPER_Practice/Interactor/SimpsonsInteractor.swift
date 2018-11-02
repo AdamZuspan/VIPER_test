@@ -24,6 +24,9 @@ class SimpsonsInteractor: SimpsonsInteractorInput {
     let url = "https://api.duckduckgo.com/?q=simpsons+characters&format=json"
     var arrData_JsonModelSimpsons = [JsonModelSimpsons]()
     
+    // Reference to the Presenter's output interface.
+    weak var output: SimpsonsInteractorOutput!
+    
     func fetchSimpsons() {
         Alamofire.request(url).responseJSON { response in
             //print("Request: \(String(describing: response.request))")   // original url request
@@ -38,27 +41,26 @@ class SimpsonsInteractor: SimpsonsInteractorInput {
                 //print("Data: \(utf8Text)") // original server data as UTF8 string
                 do {
                     let json = try JSON(data:data)
-                    print("\(json)\n\n\n")
+                    //print("\(json)\n\n\n")
                     
                     //loop through and grab each charcter
                     for i in 0..<json["RelatedTopics"].count {
                         self.arrData_JsonModelSimpsons.append(JsonModelSimpsons(json: json["RelatedTopics"][i]))
                     }
-                    //MAY NEED MAYBE??
-                    //DispatchQueue.main.async {
-                        //self.cityNameTable.reloadData()
-                    //}
                 }
                 catch {
                     print("Error was \(error.localizedDescription)")
                 }
             }
-            print("Size of arrData --> \(self.arrData_JsonModelSimpsons.count)")
-            for i in 0..<self.arrData_JsonModelSimpsons.count {
-                print(self.arrData_JsonModelSimpsons[i].characterName)
-                print(self.arrData_JsonModelSimpsons[i].characterDiscription)
-                print(self.arrData_JsonModelSimpsons[i].imageUrl)
-            }
+            // MARK: Use this to make sure Entity is being populated with good data and the correct size
+            
+//            print("Size of arrData --> \(self.arrData_JsonModelSimpsons.count)")
+//            for i in 0..<self.arrData_JsonModelSimpsons.count {
+//                print(self.arrData_JsonModelSimpsons[i].characterName)
+//                print(self.arrData_JsonModelSimpsons[i].characterDiscription)
+//                print(self.arrData_JsonModelSimpsons[i].imageUrl)
+//            }
+            self.output.simpsonsFetched(simpsons: self.arrData_JsonModelSimpsons)
         }.resume()
         
         

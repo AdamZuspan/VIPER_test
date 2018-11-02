@@ -12,6 +12,7 @@
 		D31D9C9E218BDACA005D2F44 /* SimpsonsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31D9C9D218BDACA005D2F44 /* SimpsonsInteractor.swift */; };
 		D31D9CA0218BE0B6005D2F44 /* JsonModelSimpsons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31D9C9F218BE0B6005D2F44 /* JsonModelSimpsons.swift */; };
 		D31D9CA2218BFE5C005D2F44 /* SimpsonsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31D9CA1218BFE5C005D2F44 /* SimpsonsPresenter.swift */; };
+		D31D9CA4218C1378005D2F44 /* SimpsonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31D9CA3218C1378005D2F44 /* SimpsonsViewController.swift */; };
 		D390ADE6218BD1210080E1C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D390ADE5218BD1210080E1C7 /* AppDelegate.swift */; };
 		D390ADE8218BD1210080E1C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D390ADE7218BD1210080E1C7 /* ViewController.swift */; };
 		D390ADEB218BD1210080E1C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D390ADE9218BD1210080E1C7 /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 		D31D9C9D218BDACA005D2F44 /* SimpsonsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsInteractor.swift; sourceTree = "<group>"; };
 		D31D9C9F218BE0B6005D2F44 /* JsonModelSimpsons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonModelSimpsons.swift; sourceTree = "<group>"; };
 		D31D9CA1218BFE5C005D2F44 /* SimpsonsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsPresenter.swift; sourceTree = "<group>"; };
+		D31D9CA3218C1378005D2F44 /* SimpsonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsViewController.swift; sourceTree = "<group>"; };
 		D390ADE2218BD1210080E1C7 /* VIPER_Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VIPER_Practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D390ADE5218BD1210080E1C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D390ADE7218BD1210080E1C7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				D390ADE7218BD1210080E1C7 /* ViewController.swift */,
+				D31D9CA3218C1378005D2F44 /* SimpsonsViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -452,6 +455,7 @@
 				D31D9CA0218BE0B6005D2F44 /* JsonModelSimpsons.swift in Sources */,
 				D390ADE6218BD1210080E1C7 /* AppDelegate.swift in Sources */,
 				D31D9C9E218BDACA005D2F44 /* SimpsonsInteractor.swift in Sources */,
+				D31D9CA4218C1378005D2F44 /* SimpsonsViewController.swift in Sources */,
 				D31D9CA2218BFE5C005D2F44 /* SimpsonsPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
