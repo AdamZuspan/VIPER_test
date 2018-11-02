@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		6378493355349764423B64A7 /* Pods_VIPER_PracticeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18B71BD772BC2C312164FCE /* Pods_VIPER_PracticeTests.framework */; };
 		64C816161CE2CE22B5A3A9D7 /* Pods_VIPER_PracticeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6028E9798170F3384260763A /* Pods_VIPER_PracticeUITests.framework */; };
+		D31D9C9E218BDACA005D2F44 /* SimpsonsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31D9C9D218BDACA005D2F44 /* SimpsonsInteractor.swift */; };
+		D31D9CA0218BE0B6005D2F44 /* JsonModelSimpsons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31D9C9F218BE0B6005D2F44 /* JsonModelSimpsons.swift */; };
+		D31D9CA2218BFE5C005D2F44 /* SimpsonsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31D9CA1218BFE5C005D2F44 /* SimpsonsPresenter.swift */; };
 		D390ADE6218BD1210080E1C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D390ADE5218BD1210080E1C7 /* AppDelegate.swift */; };
 		D390ADE8218BD1210080E1C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D390ADE7218BD1210080E1C7 /* ViewController.swift */; };
 		D390ADEB218BD1210080E1C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D390ADE9218BD1210080E1C7 /* Main.storyboard */; };
@@ -45,6 +48,9 @@
 		ABF823C5D1D10A9473BE6F4B /* Pods-VIPER_Practice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER_Practice.release.xcconfig"; path = "Pods/Target Support Files/Pods-VIPER_Practice/Pods-VIPER_Practice.release.xcconfig"; sourceTree = "<group>"; };
 		C76D33F710447040C85CC1EF /* Pods-VIPER_PracticeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER_PracticeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VIPER_PracticeUITests/Pods-VIPER_PracticeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CB31ABB5A969CC4DCD60273D /* Pods-VIPER_PracticeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER_PracticeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VIPER_PracticeUITests/Pods-VIPER_PracticeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D31D9C9D218BDACA005D2F44 /* SimpsonsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsInteractor.swift; sourceTree = "<group>"; };
+		D31D9C9F218BE0B6005D2F44 /* JsonModelSimpsons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonModelSimpsons.swift; sourceTree = "<group>"; };
+		D31D9CA1218BFE5C005D2F44 /* SimpsonsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsPresenter.swift; sourceTree = "<group>"; };
 		D390ADE2218BD1210080E1C7 /* VIPER_Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VIPER_Practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D390ADE5218BD1210080E1C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D390ADE7218BD1210080E1C7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -133,7 +139,6 @@
 				D390AE14218BD3590080E1C7 /* Interactor */,
 				D390AE13218BD3420080E1C7 /* View */,
 				D390ADE5218BD1210080E1C7 /* AppDelegate.swift */,
-				D390ADE7218BD1210080E1C7 /* ViewController.swift */,
 				D390ADE9218BD1210080E1C7 /* Main.storyboard */,
 				D390ADEC218BD1230080E1C7 /* Assets.xcassets */,
 				D390ADEE218BD1230080E1C7 /* LaunchScreen.storyboard */,
@@ -163,6 +168,7 @@
 		D390AE13218BD3420080E1C7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D390ADE7218BD1210080E1C7 /* ViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -170,6 +176,7 @@
 		D390AE14218BD3590080E1C7 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				D31D9C9D218BDACA005D2F44 /* SimpsonsInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -177,6 +184,7 @@
 		D390AE15218BD3650080E1C7 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				D31D9CA1218BFE5C005D2F44 /* SimpsonsPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -184,6 +192,7 @@
 		D390AE16218BD3710080E1C7 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				D31D9C9F218BE0B6005D2F44 /* JsonModelSimpsons.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -440,7 +449,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D390ADE8218BD1210080E1C7 /* ViewController.swift in Sources */,
+				D31D9CA0218BE0B6005D2F44 /* JsonModelSimpsons.swift in Sources */,
 				D390ADE6218BD1210080E1C7 /* AppDelegate.swift in Sources */,
+				D31D9C9E218BDACA005D2F44 /* SimpsonsInteractor.swift in Sources */,
+				D31D9CA2218BFE5C005D2F44 /* SimpsonsPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
