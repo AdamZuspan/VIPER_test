@@ -60,13 +60,7 @@ class SimpsonsInteractor: SimpsonsInteractorInput {
 //                print(self.arrData_JsonModelSimpsons[i].characterDiscription)
 //                print(self.arrData_JsonModelSimpsons[i].imageUrl)
 //            }
-            self.output.simpsonsFetched(simpsons: self.arrData_JsonModelSimpsons)
+            //self.output.simpsonsFetched(simpsons: self.arrData_JsonModelSimpsons)
         }.resume()
     }
-    
-    func formatSimpsonsImages(simpsonDataArray: [JsonModelSimpsons]) {
-        //Access array of models and go through each and store the imageURL in an array
-        //go through imageURL array and create actaul images
-    }
-    
 }

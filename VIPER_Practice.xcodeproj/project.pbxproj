@@ -21,6 +21,7 @@
 		D390ADF0218BD1230080E1C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D390ADEE218BD1230080E1C7 /* LaunchScreen.storyboard */; };
 		D390ADFB218BD1230080E1C7 /* VIPER_PracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D390ADFA218BD1230080E1C7 /* VIPER_PracticeTests.swift */; };
 		D390AE06218BD1230080E1C7 /* VIPER_PracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D390AE05218BD1230080E1C7 /* VIPER_PracticeUITests.swift */; };
+		D3A0B4B6218CD8CC008B6B59 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A0B4B5218CD8CC008B6B59 /* MyTableViewCell.swift */; };
 		ED6C8387CC0A55F0BBCFFCA0 /* Pods_VIPER_Practice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6483F93EA7F12406D81CC32C /* Pods_VIPER_Practice.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		D390AE01218BD1230080E1C7 /* VIPER_PracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VIPER_PracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D390AE05218BD1230080E1C7 /* VIPER_PracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPER_PracticeUITests.swift; sourceTree = "<group>"; };
 		D390AE07218BD1230080E1C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3A0B4B5218CD8CC008B6B59 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		E18B71BD772BC2C312164FCE /* Pods_VIPER_PracticeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIPER_PracticeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -174,6 +176,7 @@
 			children = (
 				D390ADE7218BD1210080E1C7 /* ViewController.swift */,
 				D31D9CA3218C1378005D2F44 /* SimpsonsViewController.swift */,
+				D3A0B4B5218CD8CC008B6B59 /* MyTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D31D9CA6218C1753005D2F44 /* SimpsonsWireFrame.swift in Sources */,
+				D3A0B4B6218CD8CC008B6B59 /* MyTableViewCell.swift in Sources */,
 				D390ADE8218BD1210080E1C7 /* ViewController.swift in Sources */,
 				D31D9CA0218BE0B6005D2F44 /* JsonModelSimpsons.swift in Sources */,
 				D390ADE6218BD1210080E1C7 /* AppDelegate.swift in Sources */,

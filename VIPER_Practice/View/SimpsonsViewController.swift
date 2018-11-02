@@ -22,31 +22,43 @@ protocol SimpsonsViewInterface: class {
  */
 class SimpsonsViewController: UIViewController, SimpsonsViewInterface {
     
+    @IBOutlet weak var tableView: UITableView!
     // Reference to the Presenter's interface.
     var presenter: SimpsonsModuleInterface!
-    
+    var simpsons = [JsonModelSimpsons]()
     /*
      * Once the view is loaded, it sends a command
      * to the presenter asking it to update the UI.
      */
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.presenter.updateView()
+        self.presenter?.updateView()
     }
     
     // MARK: ArticlesViewInterface
     
     func showSimpsonsData(simpsons: [JsonModelSimpsons]) {
-        //Issue here since no member simpsons in Class
-        
-        //self.simpsons = simpsons
-        //self.tableView.reloadData()
+        self.simpsons = simpsons
+        self.tableView.reloadData()
     }
     
     func showNoContentScreen() {
         // Show custom empty screen.
     }
-    
-    
+}
 
+extension SimpsonsViewController:  UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 43 //simpsons.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MyTableViewCell
+        if (simpsons.count == 0 ){print("Data Array empty!!")}
+        cell.simpsonDetails.text = simpsons[indexPath.row].characterName
+        return cell
+    }
+    
+    
+    
 }
